@@ -9,47 +9,56 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">Mr.coffe</div>
+    <div class="logo"><i class="fas fa-mug-hot" style="color:#c19a6b;margin-right:8px;"></i>Mr.coffe</div>
+    <button class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="menu.html">Menu</a></li>
       <li><a href="rewards.html">Rewards</a></li>
-      <li><a href="order.html">Order</a></li>
+      <li><a href="order.html" class="active">Order</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
+    <div class="nav-overlay"></div>
   </nav>
   <section class="order-section">
     <h2 class="section-title">Order Form</h2>
     <form id="orderForm" class="order-form" autocomplete="off">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required placeholder="Your Name">
         <span class="error" id="nameError"></span>
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required placeholder="your@email.com">
         <span class="error" id="emailError"></span>
       </div>
       <div class="form-group">
         <label for="address">Address</label>
-        <textarea id="address" name="address" required></textarea>
+        <textarea id="address" name="address" required placeholder="Your Address"></textarea>
         <span class="error" id="addressError"></span>
       </div>
       <div class="form-group">
         <label>Add-ons</label>
         <div class="addons">
-          <label><input type="checkbox" name="addon" value="Extra Shot"> Extra Shot (+$1)</label>
-          <label><input type="checkbox" name="addon" value="Soy Milk"> Soy Milk (+$0.5)</label>
-          <label><input type="checkbox" name="addon" value="Whipped Cream"> Whipped Cream (+$0.7)</label>
+          <label><input type="checkbox" name="addon" value="Extra Shot"> Extra Shot (+Rp5.000)</label>
+          <label><input type="checkbox" name="addon" value="Soy Milk"> Soy Milk (+Rp3.000)</label>
+          <label><input type="checkbox" name="addon" value="Whipped Cream"> Whipped Cream (+Rp4.000)</label>
         </div>
       </div>
       <div class="form-group">
         <label for="total">Total Price</label>
-        <input type="number" id="total" name="total" min="1" required>
+        <div style="display:flex;align-items:center;gap:0.5rem;">
+          <span style="font-weight:500;color:#c19a6b;">Rp</span>
+          <input type="number" id="total" name="total" min="1" required placeholder="0" style="flex:1;">
+        </div>
         <span class="error" id="totalError"></span>
       </div>
-      <button type="submit" class="btn"><span style="margin-right:8px;">☕</span>Order</button>
+      <button type="submit" class="btn"><i class="fas fa-coffee" style="margin-right:8px;"></i>Order</button>
     </form>
     <div id="orderSuccess" style="display:none; margin-top:1rem; color:green;">Order placed successfully!</div>
     <div style="margin-top:1.5rem;font-size:0.95rem;color:#a67c52;opacity:0.85;">Your data is safe & encrypted. We respect your privacy.</div>

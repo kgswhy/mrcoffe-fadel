@@ -1,7 +1,40 @@
 // JS for MR.COFFEE interactive features will be added here
 
-// 1. Popup for Rewards Page
-window.addEventListener('DOMContentLoaded', function() {
+// Mobile Navigation
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  const navOverlay = document.querySelector('.nav-overlay');
+  const body = document.body;
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      navOverlay.classList.toggle('active');
+      body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close menu when clicking overlay
+    navOverlay.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      navOverlay.classList.remove('active');
+      body.style.overflow = '';
+    });
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        navOverlay.classList.remove('active');
+        body.style.overflow = '';
+      });
+    });
+  }
+
+  // 1. Popup for Rewards Page
   const rewardBtns = document.querySelectorAll('.reward-popup');
   const modal = document.getElementById('reward-modal');
   const closeBtn = document.querySelector('.close-btn');
@@ -219,50 +252,95 @@ window.addEventListener('DOMContentLoaded', function() {
   // 3. Order Form Validation (order.html)
   const orderForm = document.getElementById('orderForm');
   if (orderForm) {
+    const name = document.getElementById('name');
+    const nameError = document.getElementById('nameError');
+    const email = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+    const address = document.getElementById('address');
+    const addressError = document.getElementById('addressError');
+    const total = document.getElementById('total');
+    const totalError = document.getElementById('totalError');
+
+    // Real-time validation for Name
+    name.addEventListener('input', function() {
+      if (name.value.trim().length < 3) {
+        nameError.textContent = 'Name must be at least 3 characters.';
+      } else if (hasNumber(name.value)) {
+        nameError.textContent = 'Name cannot contain numbers.';
+      } else {
+        nameError.textContent = '';
+      }
+    });
+    // Real-time validation for Email
+    email.addEventListener('input', function() {
+      if (email.value.trim().length < 5) {
+        emailError.textContent = 'Email must be at least 5 characters.';
+      } else if (!email.value.includes('@') || !email.value.includes('.')) {
+        emailError.textContent = 'Please enter a valid email.';
+      } else {
+        emailError.textContent = '';
+      }
+    });
+    // Real-time validation for Address
+    address.addEventListener('input', function() {
+      if (address.value.trim().length < 5) {
+        addressError.textContent = 'Address must be at least 5 characters.';
+      } else {
+        addressError.textContent = '';
+      }
+    });
+    // Real-time validation for Total
+    total.addEventListener('input', function() {
+      if (!total.value || Number(total.value) <= 0) {
+        totalError.textContent = 'Total price must be greater than 0.';
+      } else {
+        totalError.textContent = '';
+      }
+    });
+    // Helper function to check if string contains a number (no regex)
+    function hasNumber(str) {
+      for (let i = 0; i < str.length; i++) {
+        if (str[i] >= '0' && str[i] <= '9') return true;
+      }
+      return false;
+    }
+
     orderForm.addEventListener('submit', function(e) {
       e.preventDefault();
       let valid = true;
       // Name: not empty, min 3 chars
-      const name = document.getElementById('name');
-      const nameError = document.getElementById('nameError');
       if (!name.value || name.value.trim().length < 3) {
         nameError.textContent = 'Name must be at least 3 characters.';
+        valid = false;
+      } else if (hasNumber(name.value)) {
+        nameError.textContent = 'Name cannot contain numbers.';
         valid = false;
       } else {
         nameError.textContent = '';
       }
       // Email: not empty, must contain @ and .
-      const email = document.getElementById('email');
-      const emailError = document.getElementById('emailError');
-      if (!email.value || email.value.indexOf('@') === -1 || email.value.indexOf('.') === -1) {
+      if (!email.value || email.value.trim().length < 5) {
+        emailError.textContent = 'Email must be at least 5 characters.';
+        valid = false;
+      } else if (!email.value.includes('@') || !email.value.includes('.')) {
         emailError.textContent = 'Please enter a valid email.';
         valid = false;
       } else {
         emailError.textContent = '';
       }
       // Address: not empty, min 5 chars
-      const address = document.getElementById('address');
-      const addressError = document.getElementById('addressError');
       if (!address.value || address.value.trim().length < 5) {
         addressError.textContent = 'Address must be at least 5 characters.';
         valid = false;
       } else {
         addressError.textContent = '';
       }
-      // Add-ons: at least one can be selected, but not required (no error)
       // Total: must be > 0
-      const total = document.getElementById('total');
-      const totalError = document.getElementById('totalError');
       if (!total.value || Number(total.value) <= 0) {
         totalError.textContent = 'Total price must be greater than 0.';
         valid = false;
       } else {
         totalError.textContent = '';
-      }
-      // Extra: prevent numbers in name
-      if (name.value && /\d/.test(name.value)) {
-        nameError.textContent = 'Name cannot contain numbers.';
-        valid = false;
       }
       if (valid) {
         document.getElementById('orderSuccess').style.display = 'block';
