@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MR.COFFEE - Menu</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script defer src="js/main.js"></script>
 </head>
@@ -72,55 +73,6 @@
   <footer>
     &copy; 2024 MR.COFFEE &mdash; All rights reserved.
   </footer>
-
-  <style>
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    .menu-filter {
-      background: #fff;
-      border: 2px solid #eee;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      margin: 0 0.5rem;
-    }
-    
-    .menu-filter:hover {
-      background: #f5f3ee;
-      border-color: #c19a6b;
-    }
-    
-    .menu-filter.active {
-      background: var(--gradient);
-      border-color: transparent;
-      color: white;
-    }
-    
-    .product-card {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .product-card .description {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.8);
-      color: white;
-      padding: 1rem;
-      transform: translateY(100%);
-      transition: transform 0.3s ease;
-    }
-    
-    .product-card:hover .description {
-      transform: translateY(0);
-    }
-  </style>
 
   <script>
     // Ripple effect for buttons

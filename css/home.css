@@ -54,31 +54,59 @@
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
   margin-top: 2rem;
+  justify-items: center;
 }
 
 .product-card {
-  background: white;
-  border-radius: 16px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+  padding: 0;
+  width: 100%;
+  max-width: 270px;
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.16);
 }
 
 .product-card .image-container {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #f5f3ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
 .product-card img {
   width: 100%;
-  height: 200px;
+  aspect-ratio: 4/3;
+  min-height: 180px;
+  max-height: 220px;
   object-fit: cover;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #f5f3ee;
+}
+
+@media (min-width: 769px) {
+  .product-card img {
+    min-height: 220px;
+    max-height: 240px;
+  }
 }
 
 .product-card .badge {
@@ -91,31 +119,43 @@
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: bold;
+  z-index: 2;
 }
 
 .product-card .content {
-  padding: 1.5rem;
+  padding: 1.3rem 1.2rem 1.2rem 1.2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .product-card h3 {
   margin-bottom: 0.5rem;
   color: var(--dark);
+  font-size: 1.15rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .product-card .price {
   color: var(--accent);
   font-weight: bold;
   margin-bottom: 0.5rem;
+  font-size: 1.05rem;
 }
 
 .product-card .description {
   color: #666;
   margin-bottom: 1rem;
+  font-size: 0.98rem;
+  min-height: 38px;
 }
 
 .product-card .btn {
   width: 100%;
   text-align: center;
+  margin-top: auto;
 }
 
 /* Rewards Preview Section */
@@ -312,7 +352,13 @@
   }
 
   .products {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    max-width: 220px;
+    min-height: 340px;
   }
 
   .reward-card img {
@@ -346,24 +392,13 @@
   }
 
   .products {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
-  .product-card .content {
-    padding: 1rem;
-  }
-
-  .product-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .product-card .price {
-    font-size: 0.9rem;
-  }
-
-  .product-card .description {
-    font-size: 0.9rem;
+  .product-card {
+    max-width: 100%;
+    min-height: 0;
   }
 
   .reward-card {
@@ -441,7 +476,7 @@
 
   .products {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.7rem;
   }
 
   .product-card {

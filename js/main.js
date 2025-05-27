@@ -55,129 +55,81 @@ document.addEventListener('DOMContentLoaded', function() {
     {
         name: 'Classic Espresso',
         price: 'Rp 25.000',
-        img: 'https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=500',
+        img: '/assets/ClassicEspresso.jpg',
         description: 'Rich and bold espresso shot',
         type: 'espresso'
     },
     {
         name: 'Caramel Frappuccino',
         price: 'Rp 35.000',
-        img: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500',
+        img: '/assets/CaramelFrappuccino.jpg',
         description: 'Blended coffee with caramel sauce',
         type: 'frappe'
     },
     {
         name: 'Cappuccino',
         price: 'Rp 30.000',
-        img: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500',
+        img: '/assets/Cappuccino.jpg',
         description: 'Espresso with steamed milk and foam',
         type: 'espresso'
     },
     {
         name: 'Croissant',
         price: 'Rp 20.000',
-        img: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500',
+        img: '/assets/Croissant.jpg',
         description: 'Buttery, flaky pastry',
         type: 'bread'
     },
     {
         name: 'Iced Latte',
         price: 'Rp 32.000',
-        img: 'https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=500',
+        img: '/assets/IcedLatte.jpg',
         description: 'Espresso with cold milk',
         type: 'espresso'
     },
     {
         name: 'Mocha Frappuccino',
         price: 'Rp 38.000',
-        img: 'https://images.unsplash.com/photo-1579888944880-d98341245702?w=500',
+        img: '/assets/MochaFrappuccino.jpg',
         description: 'Blended coffee with chocolate sauce',
         type: 'frappe'
     },
     {
         name: 'Pour Over Coffee',
         price: 'Rp 28.000',
-        img: 'https://images.unsplash.com/photo-1447933601403-07fcbe16d735?w=500',
+        img: '/assets/PourOverCoffee.jpg',
         description: 'Hand-brewed coffee with care',
         type: 'brewed'
     },
     {
         name: 'Chocolate Croissant',
         price: 'Rp 22.000',
-        img: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=500',
+        img: '/assets/ChocolateCroissant.jpg',
         description: 'Croissant filled with chocolate',
         type: 'bread'
     },
     {
         name: 'Vanilla Latte',
         price: 'Rp 33.000',
-        img: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500',
+        img: '/assets/VanillaLatte.jpg',
         description: 'Espresso with vanilla syrup and steamed milk',
         type: 'espresso'
     },
     {
         name: 'Matcha Green Tea Latte',
         price: 'Rp 35.000',
-        img: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500',
+        img: '/assets/MatchaGreenTeaLatte.jpg',
         description: 'Premium matcha with steamed milk',
         type: 'tea'
     },
     {
         name: 'Blueberry Muffin',
         price: 'Rp 25.000',
-        img: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=500',
+        img: '/assets/Blueberry-Muffin.jpg',
         description: 'Fresh baked muffin with blueberries',
         type: 'bread'
     },
-    {
-        name: 'Cold Brew',
-        price: 'Rp 34.000',
-        img: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500',
-        description: 'Smooth cold brewed coffee',
-        type: 'brewed'
-    },
-    {
-        name: 'Tiramisu',
-        price: 'Rp 28.000',
-        img: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=500',
-        description: 'Classic Italian coffee-flavored dessert',
-        type: 'dessert'
-    },
-    {
-        name: 'Caramel Macchiato',
-        price: 'Rp 36.000',
-        img: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?w=500',
-        description: 'Espresso with vanilla and caramel',
-        type: 'espresso'
-    },
-    {
-        name: 'Chocolate Chip Cookie',
-        price: 'Rp 18.000',
-        img: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500',
-        description: 'Fresh baked chocolate chip cookie',
-        type: 'bread'
-    },
-    {
-        name: 'Hazelnut Latte',
-        price: 'Rp 34.000',
-        img: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500',
-        description: 'Espresso with hazelnut syrup and milk',
-        type: 'espresso'
-    },
-    {
-        name: 'Chocolate Cake',
-        price: 'Rp 32.000',
-        img: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500',
-        description: 'Rich chocolate cake with ganache',
-        type: 'dessert'
-    },
-    {
-        name: 'Cinnamon Roll',
-        price: 'Rp 26.000',
-        img: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500',
-        description: 'Fresh baked cinnamon roll with icing',
-        type: 'bread'
-    }
+   
   ];
   const menuList = document.querySelector('.menu-list');
   const menuFilters = document.querySelectorAll('.menu-filter');
