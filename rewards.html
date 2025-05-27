@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MR.COFFEE - Rewards</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><i class="fas fa-mug-hot" style="color:#c19a6b;margin-right:8px;"></i>Mr.coffe</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="rewards.html" class="active">Rewards</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="rewards-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; height: 300px; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">
+    <div>
+      <h1 style="font-size: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">MR.COFFEE Rewards</h1>
+      <p style="font-size: 1.2rem; opacity: 0.9;">Join our rewards program and enjoy exclusive benefits!</p>
+    </div>
+  </section>
+
+  <!-- Download App Section -->
+  <section class="download-apps" style="padding: 4rem 2rem; text-align: center; background: var(--main-bg);">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 class="section-title">Download MR.COFFEE App</h2>
+      <p style="margin: 1rem 0 2rem; color: var(--dark); font-size: 1.1rem;">Get exclusive rewards and promos by downloading our app!</p>
+      <div class="app-buttons" style="display: flex; gap: 1rem; justify-content: center;">
+        <a href="#" class="btn" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem;">
+          <i class="fab fa-google-play" style="font-size: 1.5rem;"></i>
+          <div style="text-align: left;">
+            <small style="display: block; font-size: 0.7rem;">GET IT ON</small>
+            <span style="font-size: 1.2rem;">Google Play</span>
+          </div>
+        </a>
+        <a href="#" class="btn" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem;">
+          <i class="fab fa-apple" style="font-size: 1.5rem;"></i>
+          <div style="text-align: left;">
+            <small style="display: block; font-size: 0.7rem;">Download on the</small>
+            <span style="font-size: 1.2rem;">App Store</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rewards List Section -->
+  <section class="rewards-list" style="padding: 4rem 2rem; background: white;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 class="section-title">Our Rewards & Promos</h2>
+      <div class="rewards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+        <div class="reward-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <div style="position: relative;">
+            <span class="badge" style="position: absolute; top: 1rem; left: 1rem; background: var(--gradient); color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Hot!</span>
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=80" alt="Free Coffee" style="width: 100%; height: 200px; object-fit: cover;">
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Free Coffee Monday</h3>
+            <p style="color: #666; margin-bottom: 1rem;">Get a free cup every Monday with our app!</p>
+            <button class="btn reward-popup" style="width: 100%;">Get This Reward</button>
+          </div>
+        </div>
+
+        <div class="reward-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80" alt="Buy 1 Get 1" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Buy 1 Get 1 Frappe</h3>
+            <p style="color: #666; margin-bottom: 1rem;">Buy one Frappe, get one free every Friday!</p>
+            <button class="btn reward-popup" style="width: 100%;">Get This Reward</button>
+          </div>
+        </div>
+
+        <div class="reward-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80" alt="Discount" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem; color: var(--dark);">20% Off Espresso</h3>
+            <p style="color: #666; margin-bottom: 1rem;">Enjoy 20% off all espresso drinks this month.</p>
+            <button class="btn reward-popup" style="width: 100%;">Get This Reward</button>
+          </div>
+        </div>
+
+        <div class="reward-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Birthday" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Birthday Treat</h3>
+            <p style="color: #666; margin-bottom: 1rem;">Free cake on your birthday with any coffee purchase.</p>
+            <button class="btn reward-popup" style="width: 100%;">Get This Reward</button>
+          </div>
+        </div>
+
+        <div class="reward-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Loyalty" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Loyalty Points</h3>
+            <p style="color: #666; margin-bottom: 1rem;">Collect points and redeem for free drinks!</p>
+            <div style="width: 100%; background: #eee; border-radius: 8px; height: 14px; margin: 1rem 0; overflow: hidden;">
+              <div style="width: 60%; height: 100%; background: var(--gradient); border-radius: 8px;"></div>
+            </div>
+            <button class="btn reward-popup" style="width: 100%;">Get This Reward</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2024 MR.COFFEE &mdash; All rights reserved.
+  </footer>
+
+  <!-- Modal -->
+  <div id="reward-modal" class="modal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
+    <div class="modal-content" style="background: white; max-width: 500px; margin: 2rem auto; padding: 2rem; border-radius: 16px; position: relative; animation: modalSlideIn 0.3s;">
+      <span class="close-btn" style="position: absolute; right: 1rem; top: 1rem; font-size: 1.5rem; cursor: pointer; color: #666;">&times;</span>
+      <h3 style="margin-bottom: 1rem; color: var(--dark);">Download MR.COFFEE App</h3>
+      <p style="margin-bottom: 2rem; color: #666;">To claim this reward, please download our app from Play Store or App Store!</p>
+      <div class="app-buttons" style="display: flex; gap: 1rem; justify-content: center;">
+        <a href="#" class="btn" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem;">
+          <i class="fab fa-google-play" style="font-size: 1.5rem;"></i>
+          <div style="text-align: left;">
+            <small style="display: block; font-size: 0.7rem;">GET IT ON</small>
+            <span style="font-size: 1.2rem;">Google Play</span>
+          </div>
+        </a>
+        <a href="#" class="btn" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem;">
+          <i class="fab fa-apple" style="font-size: 1.5rem;"></i>
+          <div style="text-align: left;">
+            <small style="display: block; font-size: 0.7rem;">Download on the</small>
+            <span style="font-size: 1.2rem;">App Store</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes modalSlideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .reward-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .btn {
+      background: var(--gradient);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      .app-buttons {
+        flex-direction: column;
+      }
+      
+      .rewards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</body>
+</html>

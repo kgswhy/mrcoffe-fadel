@@ -1,0 +1,22 @@
+# References for MR.COFFEE Website
+
+## Images (Placeholder)
+- Coffee products, banner, and rewards: https://unsplash.com/s/photos/coffee
+- CEO photo: https://www.pexels.com/photo/elderly-man-in-suit-1707828/
+- Croissant: https://unsplash.com/photos/croissant-bread
+- Banana Bread: https://unsplash.com/photos/banana-bread
+
+## Icons
+- App Store & Play Store icons: https://icons8.com/
+
+## Fonts
+- Playfair Display & Roboto: https://fonts.google.com/
+
+## Design Inspiration
+- https://dribbble.com/tags/coffee-shop
+- https://www.behance.net/search/projects?search=coffee%20website
+
+## Color Palette
+- https://coolors.co/palette/f5f3ee-c19a6b-2d2a26-fff
+
+All images are for educational and prototype purposes only. Please replace with your own or licensed images for production use.

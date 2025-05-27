@@ -1,0 +1,327 @@
+/* Hero Section */
+.banner {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 800px;
+}
+
+.banner-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.banner-text .slogan {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.banner-text .btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Most Ordered Section */
+.most-ordered {
+  padding: 4rem 2rem;
+  background: var(--main-bg);
+}
+
+.most-ordered .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card .image-container {
+  position: relative;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card .badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--gradient);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.product-card .content {
+  padding: 1.5rem;
+}
+
+.product-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.product-card .price {
+  color: var(--accent);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.product-card .description {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.product-card .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* Rewards Preview Section */
+.rewards-preview {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.rewards-preview .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reward-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: var(--main-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.reward-card img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.reward-card .content {
+  flex: 1;
+}
+
+.reward-card h3 {
+  margin-bottom: 1rem;
+  color: var(--dark);
+  font-size: 1.5rem;
+}
+
+.reward-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.reward-card .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Testimonials Section */
+.testimonial-section {
+  padding: 4rem 2rem;
+  background: var(--main-bg);
+  text-align: center;
+}
+
+.testimonial-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+
+.testimonial-card .quote-icon {
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card .quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card .author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.testimonial-card .author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-card .author-info {
+  text-align: left;
+}
+
+.testimonial-card .author-name {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.testimonial-card .author-title {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* CEO Section */
+.ceo-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.ceo-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  background: var(--main-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.ceo-section img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.ceo-section .content {
+  flex: 1;
+}
+
+.ceo-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.ceo-section .title {
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.ceo-section .quote {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.ceo-section .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Buttons */
+.btn {
+  background: var(--gradient);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .banner-text .slogan {
+    font-size: 1.2rem;
+  }
+
+  .ceo-section .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reward-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reward-card img {
+    width: 100%;
+  }
+} 

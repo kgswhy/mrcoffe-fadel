@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MR.COFFEE - Menu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><i class="fas fa-mug-hot" style="color:#c19a6b;margin-right:8px;"></i>Mr.coffe</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="rewards.html">Rewards</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <section class="menu-section" style="animation:fadeIn 1s;">
+    <h2 class="section-title"><i class="fas fa-utensils" style="color:#c19a6b;margin-right:8px;"></i>Our Menu</h2>
+    
+    <!-- Search Bar -->
+    <div class="search-container" style="max-width: 500px; margin: 1rem auto;">
+      <div class="search-box" style="position: relative;">
+        <input type="text" id="menuSearch" placeholder="Search menu items..." style="width: 100%; padding: 0.8rem 1rem 0.8rem 2.5rem; border: 2px solid #eee; border-radius: 8px; font-size: 1rem;">
+        <i class="fas fa-search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: #a67c52;"></i>
+      </div>
+    </div>
+
+    <!-- Menu Filters -->
+    <div class="menu-bar" style="position:sticky;top:70px;z-index:10;background:#fff;padding:1rem 0;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+      <button class="menu-filter active" data-type="all"><i class="fas fa-th-large"></i> All</button>
+      <button class="menu-filter" data-type="espresso"><i class="fas fa-coffee"></i> Espresso</button>
+      <button class="menu-filter" data-type="frappe"><i class="fas fa-ice-cream"></i> Frappe</button>
+      <button class="menu-filter" data-type="brewed"><i class="fas fa-tint"></i> Brewed</button>
+      <button class="menu-filter" data-type="bread"><i class="fas fa-bread-slice"></i> Bread</button>
+      <button class="menu-filter" data-type="dessert"><i class="fas fa-cookie"></i> Dessert</button>
+      <button class="menu-filter" data-type="tea"><i class="fas fa-mug-hot"></i> Tea</button>
+    </div>
+
+    <!-- Loading State -->
+    <div id="menuLoading" style="display: none; text-align: center; padding: 2rem;">
+      <div class="loading-spinner" style="width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #c19a6b; border-radius: 50%; margin: 0 auto; animation: spin 1s linear infinite;"></div>
+      <p style="margin-top: 1rem; color: #a67c52;">Loading menu items...</p>
+    </div>
+
+    <!-- No Results Message -->
+    <div id="noResults" style="display: none; text-align: center; padding: 2rem; color: #a67c52;">
+      <i class="fas fa-search" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+      <p>No menu items found matching your search.</p>
+    </div>
+
+    <!-- Menu List -->
+    <div class="menu-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; padding: 1rem;">
+      <!-- Products will be populated by JS -->
+    </div>
+
+    <a href="order.html" class="btn" style="margin: 2rem auto; display: block; width: fit-content;">
+      <i class="fas fa-shopping-cart" style="margin-right:8px;"></i>Order Now
+    </a>
+  </section>
+
+  <footer>
+    &copy; 2024 MR.COFFEE &mdash; All rights reserved.
+  </footer>
+
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .menu-filter {
+      background: #fff;
+      border: 2px solid #eee;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 0 0.5rem;
+    }
+    
+    .menu-filter:hover {
+      background: #f5f3ee;
+      border-color: #c19a6b;
+    }
+    
+    .menu-filter.active {
+      background: var(--gradient);
+      border-color: transparent;
+      color: white;
+    }
+    
+    .product-card {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .product-card .description {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.8);
+      color: white;
+      padding: 1rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover .description {
+      transform: translateY(0);
+    }
+  </style>
+
+  <script>
+    // Ripple effect for buttons
+    document.querySelectorAll('.btn, .menu-filter').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const circle = document.createElement('span');
+        circle.className = 'ripple';
+        circle.style.left = e.offsetX + 'px';
+        circle.style.top = e.offsetY + 'px';
+        this.appendChild(circle);
+        setTimeout(() => circle.remove(), 600);
+      });
+    });
+
+    // Search functionality
+    const searchInput = document.getElementById('menuSearch');
+    if (searchInput) {
+      searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        const menuItems = document.querySelectorAll('.product-card');
+        let hasResults = false;
+
+        menuItems.forEach(item => {
+          const name = item.querySelector('h3').textContent.toLowerCase();
+          const description = item.querySelector('.description').textContent.toLowerCase();
+          const matches = name.includes(searchTerm) || description.includes(searchTerm);
+          
+          item.style.display = matches ? 'block' : 'none';
+          if (matches) hasResults = true;
+        });
+
+        document.getElementById('noResults').style.display = hasResults ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MR.COFFEE - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><i class="fas fa-mug-hot" style="color:#c19a6b;margin-right:8px;"></i>Mr.coffe</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="rewards.html">Rewards</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="banner" style="position: relative; height: 80vh; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1920&q=80" alt="Coffee Banner" class="banner-img" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7);">
+    <div class="banner-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; width: 90%; max-width: 800px;">
+      <h1 style="font-size: 3.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Drink your coffee to start your day</h1>
+      <p class="slogan" style="font-size: 1.5rem; opacity: 0.9; margin-bottom: 2rem;">Every cup tells a story</p>
+      <a href="menu.html" class="btn" style="padding: 1rem 2rem; font-size: 1.1rem;">
+        <i class="fas fa-coffee" style="margin-right: 8px;"></i>Explore Menu
+      </a>
+    </div>
+  </header>
+
+  <!-- Most Ordered Section -->
+  <section class="most-ordered" style="padding: 4rem 2rem; background: var(--main-bg);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 class="section-title">Most Ordered</h2>
+      <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+        <div class="product-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <div style="position: relative;">
+            <span class="badge" style="position: absolute; top: 1rem; left: 1rem; background: var(--gradient); color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Best Seller</span>
+            <img src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=800" alt="Classic Espresso" style="width: 100%; height: 200px; object-fit: cover;">
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Classic Espresso</h3>
+            <p style="color: var(--accent); font-weight: bold; margin-bottom: 0.5rem;">Rp 25.000</p>
+            <p style="color: #666; margin-bottom: 1rem;">Rich and bold espresso shot</p>
+            <a href="menu.html" class="btn" style="width: 100%; text-align: center;">Order Now</a>
+          </div>
+        </div>
+
+        <div class="product-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=800" alt="Caramel Frappuccino" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Caramel Frappuccino</h3>
+            <p style="color: var(--accent); font-weight: bold; margin-bottom: 0.5rem;">Rp 35.000</p>
+            <p style="color: #666; margin-bottom: 1rem;">Blended coffee with caramel sauce</p>
+            <a href="menu.html" class="btn" style="width: 100%; text-align: center;">Order Now</a>
+          </div>
+        </div>
+
+        <div class="product-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800" alt="Cappuccino" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Cappuccino</h3>
+            <p style="color: var(--accent); font-weight: bold; margin-bottom: 0.5rem;">Rp 30.000</p>
+            <p style="color: #666; margin-bottom: 1rem;">Espresso with steamed milk and foam</p>
+            <a href="menu.html" class="btn" style="width: 100%; text-align: center;">Order Now</a>
+          </div>
+        </div>
+
+        <div class="product-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800" alt="Croissant" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Croissant</h3>
+            <p style="color: var(--accent); font-weight: bold; margin-bottom: 0.5rem;">Rp 20.000</p>
+            <p style="color: #666; margin-bottom: 1rem;">Buttery, flaky pastry</p>
+            <a href="menu.html" class="btn" style="width: 100%; text-align: center;">Order Now</a>
+          </div>
+        </div>
+
+        <div class="product-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+          <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=800" alt="Iced Latte" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem; color: var(--dark);">Iced Latte</h3>
+            <p style="color: var(--accent); font-weight: bold; margin-bottom: 0.5rem;">Rp 32.000</p>
+            <p style="color: #666; margin-bottom: 1rem;">Espresso with cold milk</p>
+            <a href="menu.html" class="btn" style="width: 100%; text-align: center;">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rewards Preview Section -->
+  <section class="rewards-preview" style="padding: 4rem 2rem; background: white;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 class="section-title">Rewards</h2>
+      <div class="reward-card" style="display: flex; align-items: center; gap: 2rem; background: var(--main-bg); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=80" alt="Free Coffee" style="width: 300px; height: 200px; object-fit: cover; border-radius: 12px;">
+        <div>
+          <h3 style="margin-bottom: 1rem; color: var(--dark); font-size: 1.5rem;">Free Coffee Monday</h3>
+          <p style="color: #666; margin-bottom: 1.5rem; font-size: 1.1rem;">Get a free cup every Monday with our app!</p>
+          <a href="rewards.html" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-gift"></i> See All Rewards
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonial-section" style="padding: 4rem 2rem; background: var(--main-bg); text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-top: 2rem;">
+        <i class="fas fa-quote-left" style="color: var(--accent); font-size: 2rem; margin-bottom: 1rem;"></i>
+        <p style="font-style: italic; font-size: 1.2rem; color: #666; margin-bottom: 1rem;">"The best coffee shop in town! The atmosphere is cozy and the coffee is always perfect."</p>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Clara" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+          <div style="text-align: left;">
+            <p style="font-weight: 500; color: var(--dark);">Clara</p>
+            <p style="color: #666; font-size: 0.9rem;">Designer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CEO Section -->
+  <section class="ceo-section" style="padding: 4rem 2rem; background: white;">
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; align-items: center; gap: 3rem; background: var(--main-bg); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+      <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80" alt="Susanto Liman" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+      <div>
+        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--dark);">Susanto Liman</h3>
+        <p style="color: var(--accent); font-weight: 500; margin-bottom: 1rem;">CEO & Founder</p>
+        <p style="color: #666; margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.6;">"At Mr.Coffe, our dream is to serve high quality coffee, made with the freshest local ingredients to customers across Indonesia and the rest of the world."</p>
+        <a href="about.html" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="fas fa-book-open"></i> Read More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2024 MR.COFFEE &mdash; All rights reserved.
+  </footer>
+
+  <style>
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .btn {
+      background: var(--gradient);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      .ceo-section > div {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .reward-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .reward-card img {
+        width: 100% !important;
+      }
+
+      .banner-text h1 {
+        font-size: 2rem !important;
+      }
+
+      .banner-text .slogan {
+        font-size: 1.2rem !important;
+      }
+    }
+  </style>
+</body>
+</html>
